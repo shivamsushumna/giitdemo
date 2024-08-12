@@ -1,5 +1,6 @@
 pipeline {
-    agent any // Specify the agent label here
+    agent {
+        dev }// Specify the agent label here
 
     stages {
         stage('Build') {
