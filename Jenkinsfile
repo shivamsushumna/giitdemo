@@ -1,14 +1,29 @@
 pipeline {
-    agent any
+    agent any  // Specify the agent label here
+
     stages {
-        stage("ckeckout") {
-            sh "echo checkout done"
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+            }
         }
-        stage("build") {
-            sh "echo build is done"
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
         }
-        stage("deploy") {
-            sh "echo deploy is done"
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning up...'
+            }
         }
     }
 }
